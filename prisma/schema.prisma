@@ -49,6 +49,7 @@ model User {
   amount String
   quantity String
   description String
+  tracking_code String
 
   created_at DateTime? @default(now())
   updated_at DateTime? @default(now())
