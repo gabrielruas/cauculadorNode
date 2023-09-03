@@ -10,5 +10,47 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+model User {
+  id String @id @default(uuid())
+  fullname_sender String
+  cpf_sender String
+  phone_sender String
+  email_sender String
+  address_sender String
+  cep_sender String
+  state_sender String
+  uf_sender String
+  city_sender String
+  neighborhood_sender String
+  street_sender String
+  number_sender String
+  complement_sender String
+  fullname_receiver String
+  cpf_receiver String
+  phone_receiver String
+  email_receiver String
+  address_receiver String
+  cep_receiver String
+  state_receiver String
+  uf_receiver String
+  city_receiver String
+  neighborhood_receiver String
+  street_receiver String
+  number_receiver String
+  complement_receiver String
+  weight String
+  height String
+  width String
+  length String
+  reverse String
+  ar String
+  own_hands String
+  information String
+  amount String
+  quantity String
+  description String
 
-
+  created_at DateTime? @default(now())
+  updated_at DateTime? @default(now())
+  @@map("users")
+}
